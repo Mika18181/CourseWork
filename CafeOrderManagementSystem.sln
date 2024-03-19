@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CafeOrderManagementSystem", "CafeOrderManagementSystem\CafeOrderManagementSystem.csproj", "{4F442BE2-3C0B-43DB-A130-CC744624ABFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KrisLib", "KrisLib\KrisLib.csproj", "{B635FD4C-ACAC-4123-A6C6-AF60C12FD841}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KrisLibTests", "KrisLibTests\KrisLibTests.csproj", "{FF7AD197-6DD1-4320-B8A2-2BC6F64F2EEC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F442BE2-3C0B-43DB-A130-CC744624ABFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F442BE2-3C0B-43DB-A130-CC744624ABFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F442BE2-3C0B-43DB-A130-CC744624ABFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F442BE2-3C0B-43DB-A130-CC744624ABFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B635FD4C-ACAC-4123-A6C6-AF60C12FD841}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B635FD4C-ACAC-4123-A6C6-AF60C12FD841}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B635FD4C-ACAC-4123-A6C6-AF60C12FD841}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B635FD4C-ACAC-4123-A6C6-AF60C12FD841}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF7AD197-6DD1-4320-B8A2-2BC6F64F2EEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF7AD197-6DD1-4320-B8A2-2BC6F64F2EEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF7AD197-6DD1-4320-B8A2-2BC6F64F2EEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF7AD197-6DD1-4320-B8A2-2BC6F64F2EEC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

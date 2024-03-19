@@ -1,0 +1,33 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="CafeOrderManagementSystem.ViewOrderWindow"
+        Title="CartWindow"
+        Background="SaddleBrown"
+        WindowStartupLocation="CenterScreen"
+        CanResize="False"
+        ExtendClientAreaToDecorationsHint="True"
+        IsHitTestVisible="True"
+        Width="1000"
+        Height="450">
+    <Grid>
+        <DataGrid Name="CartDGrid" x:CompileBindings="False" IsReadOnly="True" Background="White" 
+                  VerticalAlignment="Center"  AutoGenerateColumns="False" 
+                  CanUserResizeColumns="False" Height="390"  Margin="5" 
+                  GridLinesVisibility="Horizontal"
+                  BorderBrush="SandyBrown"
+                  BorderThickness="3">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding OrderId}"/>
+                <DataGridTextColumn Header="Официант" Binding="{Binding User}"/>
+                <DataGridTextColumn Header="Продукт" Binding="{Binding Product}" Width="250"/>
+                <DataGridTextColumn Header="Столик" Binding="{Binding Table}"/>
+                <DataGridTextColumn Header="Количество" Binding="{Binding Quantity}"/>
+                <DataGridTextColumn Header="Цена" Binding="{Binding Price}"/>
+                <DataGridTextColumn Header="Сумма" Binding="{Binding TotalPrice}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

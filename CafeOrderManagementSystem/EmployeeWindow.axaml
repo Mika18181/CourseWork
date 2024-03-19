@@ -1,0 +1,75 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="450"
+        x:Class="CafeOrderManagementSystem.EmployeeWindow"
+        Title="EmployeeWindow"
+        Background="SaddleBrown"
+        WindowStartupLocation="CenterScreen"
+        CanResize="False"
+        ExtendClientAreaToDecorationsHint="True"
+        IsHitTestVisible="True"
+        Width="1000"
+        Height="450">
+    <Grid>
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.Styles>
+                        <Style Selector="Button">
+                                <Setter Property="Margin" Value="0 5 0 0"/>
+                                <Setter Property="Height" Value="40"/>
+                                <Setter Property="Width" Value="100"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                <Setter Property="FontSize" Value="15"/>
+                                <Setter Property="FontWeight" Value="DemiBold"/>
+                                <Setter Property="Foreground" Value="White"/>
+                                <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                        <Style Selector="TextBox">
+                                <Setter Property="Width" Value="250"/>
+                                <Setter Property="TextWrapping" Value="Wrap"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                        </Style>
+                        <Style Selector="TextBlock">
+                                <Setter Property="HorizontalAlignment" Value="Center"/>
+                                <Setter Property="TextWrapping" Value="Wrap"/>
+                                <Setter Property="VerticalAlignment" Value="Center"/>
+                        </Style>
+                </Grid.Styles>
+                <StackPanel Grid.Row="1" Grid.Column="0">
+                        <TextBlock Text="Логин:" Foreground="White" Margin="5"/>
+                        <TextBox Name="LoginTBox"/>
+                        <TextBlock Text="Пароль:" Foreground="White" Margin="5"/>
+                        <TextBox Name="PasswordTBox"/>
+                        <TextBlock Text="Имя:" Foreground="White" Margin="5"/>
+                        <TextBox Name="NameTBox"/>
+                        <Button Name="AddBtn" Content="Сохранить" Foreground="White" Click="AddBtn_OnClick"/>
+                        <Button Name="DeleteBtn" Content="Удалить" Foreground="White" Click="DeleteBtn_OnClick"/>
+                </StackPanel>
+                
+                <DataGrid Grid.Row="1" Grid.Column="1" Name="UserDGrid"  
+                          x:CompileBindings="False" IsReadOnly="True" Background="White" 
+                          VerticalAlignment="Center" HorizontalAlignment="Right" AutoGenerateColumns="False" 
+                          CanUserResizeColumns="False" Height="390" Width="600" Margin="5" 
+                           GridLinesVisibility="Horizontal"
+                          SelectionChanged="UserDGrid_OnSelectionChanged"
+                          BorderBrush="SandyBrown"
+                          BorderThickness="3">
+                        <DataGrid.Columns>
+                                <DataGridTextColumn Header="ID" Binding="{Binding UserId}" FontWeight="DemiBold"/>
+                                <DataGridTextColumn Header="Логин" Binding="{Binding Login}" FontWeight="DemiBold" Width="200" />
+                                <DataGridTextColumn Header="Пароль" Binding="{Binding Password}" FontWeight="DemiBold" Width="130"/>
+                                <DataGridTextColumn Header="Имя" Binding="{Binding Name}" FontWeight="DemiBold" Width="150"/>
+                        </DataGrid.Columns>
+                </DataGrid>
+        </Grid>
+</Window>

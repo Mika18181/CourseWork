@@ -1,0 +1,91 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:entities="clr-namespace:CafeOrderManagementSystem.Entities"
+        mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="450"
+        x:Class="CafeOrderManagementSystem.OrderWindow"
+        Title="OrderWindow"
+        Background="SaddleBrown"
+        WindowStartupLocation="CenterScreen"
+        CanResize="False"
+        ExtendClientAreaToDecorationsHint="True"
+        IsHitTestVisible="True"
+        Width="1000"
+        Height="450">
+    <Window.Resources>
+                <entities:ImageConverter x:Key="ImageConverter" />
+        </Window.Resources>
+        
+        <Grid>
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.Styles>
+                        <Style Selector="Button">
+                                <Setter Property="Margin" Value="0 15 0 0"/>
+                                <Setter Property="Height" Value="40"/>
+                                <Setter Property="Width" Value="100"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                                <Setter Property="FontSize" Value="15"/>
+                                <Setter Property="FontWeight" Value="DemiBold"/>
+                                <Setter Property="Foreground" Value="White"/>
+                                <Setter Property="HorizontalAlignment" Value="Center"/>
+                        </Style>
+                        <Style Selector="TextBox">
+                                <Setter Property="Width" Value="250"/>
+                                <Setter Property="TextWrapping" Value="Wrap"/>
+                                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                        </Style>
+                        <Style Selector="TextBlock">
+                                <Setter Property="HorizontalAlignment" Value="Center"/>
+                                <Setter Property="TextWrapping" Value="Wrap"/>
+                                <Setter Property="VerticalAlignment" Value="Center"/>
+                        </Style>
+                </Grid.Styles>
+                <StackPanel Grid.Row="1" Grid.Column="0">
+                        <TextBlock Text="Название:" Foreground="White" Margin="10"/>
+                        <TextBox Name="NameTBox" Margin="10"/>
+                        <TextBlock Text="Количество:" Foreground="White" Margin="10"/>
+                        <TextBox Name="QuantityTBox" Margin="10" />
+                        <TextBlock Text="Столик:" Foreground="White" Margin="10"/>
+                        <ComboBox Name="TableCBox" Margin="10" Width="250" HorizontalAlignment="Center"/>
+                        <Button Name="AddBtn" Content="Добавить заказ" Foreground="White" Width="170" Click="AddBtn_OnClickOpenBtn_OnClick"  />  
+                        <TextBlock Text="Итого: " Name="TotalTxt" Foreground="White" Margin="10"/>
+                </StackPanel>
+                
+                
+                <DataGrid Grid.Row="1" Grid.Column="1" Name="ProductsDGrid"  
+                          x:CompileBindings="False" IsReadOnly="True" Background="White" 
+                          VerticalAlignment="Center" HorizontalAlignment="Right" AutoGenerateColumns="False" 
+                          CanUserResizeColumns="False" Height="390" Width="600" Margin="5" 
+                          GridLinesVisibility="Horizontal"
+                          SelectionChanged="ProductsDGrid_OnSelectionChanged"
+                          BorderBrush="SandyBrown"
+                          BorderThickness="3">
+                        <DataGrid.Columns>
+                                <DataGridTextColumn Header="ID" Binding="{Binding ProductId}" FontWeight="DemiBold"/>
+                                <DataGridTextColumn Header="Название" Binding="{Binding ProductName}" FontWeight="DemiBold" Width="200" />
+                                <DataGridTextColumn Header="Цена" Binding="{Binding Price}" FontWeight="DemiBold" Width="130"/>
+                                <DataGridTemplateColumn Header="Изображение">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                        <Image Margin="5" HorizontalAlignment="Left" VerticalAlignment="Center" Stretch="UniformToFill" Width="200" Height="150" x:CompileBindings="False">
+                                                                <Image.Source>
+                                                                        <Binding Path="Image" Converter="{StaticResource ImageConverter}"/>
+                                                                </Image.Source>
+                                                        </Image>
+                                                </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                </DataGrid>
+        </Grid>
+</Window>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="CafeOrderManagementSystem/AddProductWindow.axaml" value="CafeOrderManagementSystem/CafeOrderManagementSystem.csproj" />
+        <entry key="CafeOrderManagementSystem/App.axaml" value="CafeOrderManagementSystem/CafeOrderManagementSystem.csproj" />
+        <entry key="CafeOrderManagementSystem/CartWindow.axaml" value="CafeOrderManagementSystem/CafeOrderManagementSystem.csproj" />
+        <entry key="CafeOrderManagementSystem/EmployeeWindow.axaml" value="CafeOrderManagementSystem/CafeOrderManagementSystem.csproj" />
+        <entry key="CafeOrderManagementSystem/LoginWindow.axaml" value="CafeOrderManagementSystem/CafeOrderManagementSystem.csproj" />
+        <entry key="CafeOrderManagementSystem/MainWindow.axaml" value="CafeOrderManagementSystem/CafeOrderManagementSystem.csproj" />
+        <entry key="CafeOrderManagementSystem/OrderWindow.axaml" value="CafeOrderManagementSystem/CafeOrderManagementSystem.csproj" />
+        <entry key="CafeOrderManagementSystem/ProductWindow.axaml" value="CafeOrderManagementSystem/CafeOrderManagementSystem.csproj" />
+        <entry key="CafeOrderManagementSystem/ViewOrderWindow.axaml" value="CafeOrderManagementSystem/CafeOrderManagementSystem.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
